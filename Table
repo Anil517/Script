@@ -1,0 +1,35 @@
+#!/bin/bash 
+
+b=`awk -F "," 'NR>1 {print $1}' company.txt`
+echo $b
+
+echo "Enter which value u want"
+read value 
+
+declare -a arr=($b);
+#echo " ${arr[@]}" 
+IFS=" "
+e=`awk  'NR>1 {print $0}' company.txt`
+echo $e
+for i in "${!arr[@]}";
+do
+   if [[ "${arr[$i]}" = "${value}" ]];
+   then
+      a=`echo "${i}"`;
+      c=$((a+1))
+      #IFS=" "
+      #e=`awk  'NR>1 {print $0}' company.txt`
+      echo $e|awk -v n="$c" 'FNR == n {print $0}'
+     # echo $e | cut -d "," -f 1,2,3,4,5 | sed -n ${c}p
+   fi
+done
+
+: '
+filename  company.txt 
+Id,name,company,sex,age 
+1,john,Google,M,35
+2,james,infosys,M,27
+3,Elizabeth,microsfot,M,34
+'
+
+
