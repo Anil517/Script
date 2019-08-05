@@ -29,7 +29,7 @@ filename  company.txt
 Id,name,company,sex,age 
 1,john,Google,M,35
 2,james,infosys,M,27
-3,Elizabeth,microsfot,M,34
+3,Elizabeth,microsfot,M,34 
 '
 
 
