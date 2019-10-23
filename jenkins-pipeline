@@ -14,7 +14,7 @@ node
        }
         def mvnHome = tool name: 'Maven', type: 'maven'
         
-        def name = "')'^no!t@mrofn!\$'('" 
+        def name = "')'^n!t@mr\$'('" 
         sh "${mvnHome}/bin/mvn clean -DreleaseVersion=${name} -DdevelopmentVersion=${Var1}-'gkefinal'"
     }
     stage(' Mail Approval')
