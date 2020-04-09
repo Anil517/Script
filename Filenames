@@ -2,3 +2,5 @@
 find . -type f -iname "*.txt" -exec basename {} .txt ';' >> script2.csv
 cat script2.csv
 
+
+##Thankyou 
